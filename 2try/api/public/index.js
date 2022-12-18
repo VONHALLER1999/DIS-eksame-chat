@@ -1,26 +1,25 @@
+document.addEventListener("DOMContentLoaded", (event) => {
+  event.preventDefault();
 
-const crypto = require("crypto");
-const { personPublicKey, personPrivateKey } = crypto.generateKeyPairSync("rsa", {
-  // The standard secure default length for RSA keys is 2048 bits
-  modulusLength: 2048,
-});
-fetch("http://localhost:3030/api/getserverkey")
-  .then(console.log("fetch happend"))
-  .then((res) => res.json())
-  .then(function (serverPublicKey) {
-    console.log(serverPublicKey);
-    console.log("fetch happend2");
-  });
 
-/*
-let messageBtn = 
-login.addEventListener("click", () => {
-   .then((res) => res.json())
-   .then(function (result) {
-        sendEncryptedMsg(public,);
+    fetch("https://localhost:3000/api/currentchat")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.length);
+        createTable(data)
       })
-});
-*/
+       
+      function createTable(data) {
+        for (let i = 0; i < data.length; i++) {
+          var table = document.getElementById("table");
+          var row = table.insertRow(i);
 
+          var cell1 = row.insertCell(i);
+
+          cell1.innerHTML = data;
+        }
+      }
+    
+  })
 
 

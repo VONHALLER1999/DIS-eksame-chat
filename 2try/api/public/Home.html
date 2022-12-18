@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <link rel="stylesheet" type="text/css" href="/style.css">    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
-    
+    <script src="/index.js">
+    </script>
 </head>
 <body>
     <div class='home'>
@@ -23,9 +24,15 @@
                 
             </div>
             
-            <div class='chat'>chat</div>
+            <div class='chat'>chat
+                <table id="table">
+                    <tr>
+                        <th>Message</th>
+                    </tr>
+                </table>
+            </div>
             <div class='input'>
-                <form action="/api/message" method="POST">
+                <form action="/api/getmessage" method="POST">
                     <input name="msg" placeholder="your message here " required=""> 
                     <button>send message</button>
                 </form>
