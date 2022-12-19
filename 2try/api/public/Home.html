@@ -25,17 +25,16 @@
             </div>
             
             <div class='chat'>chat
-                <table id="table">
-                    <tr>
-                        <th>Message</th>
-                    </tr>
-                </table>
+
+                    <p id="myPar"></p>
+             
             </div>
             <div class='input'>
                 <form action="/api/getmessage" method="POST">
                     <input name="msg" placeholder="your message here " required=""> 
-                    <button>send message</button>
+                    <button id="sendMsg">send message</button>
                 </form>
+                <button id="refresh">refresh chat</button>
             </div>
             
         </div>
