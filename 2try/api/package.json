@@ -2,13 +2,17 @@
   "dependencies": {
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
+    "cookieparser": "^0.1.0",
     "crypto": "^1.0.1",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
+    "express-socket.io-session": "^1.3.5",
     "install": "^0.13.0",
     "nodemon": "^2.0.20",
     "session": "^0.1.0",
+    "socket.io": "^4.5.4",
     "sqlite": "^4.1.2",
-    "sqlite3": "^5.1.4"
+    "sqlite3": "^5.1.4",
+    "validator": "^13.7.0"
   }
 }
